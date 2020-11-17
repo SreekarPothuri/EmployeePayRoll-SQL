@@ -8,3 +8,5 @@ CREATE TABLE employee_payroll (
     start DATE NOT NULL,
     PRIMARY KEY (id)
 );
+
+INSERT INTO employee_payroll(name,salary,start) VALUES ('KANE',50000,'2020-12-30'),('KOHLI',40000,'2020-12-31'),('WARNER',60000,'2020-12-29');

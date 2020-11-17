@@ -27,5 +27,18 @@ UPDATE employee_payroll SET gender = 'M';
 
 describe employee_payroll;
 
+SELECT sum(salary) FROM employee_payroll WHERE gender = 'M' GROUP BY gender;
+SELECT min(salary) FROM employee_payroll WHERE gender = 'M' GROUP BY gender;
+SELECT max(salary) FROM employee_payroll WHERE gender = 'M' GROUP BY gender;
+SELECT avg(salary) FROM employee_payroll WHERE gender = 'M' GROUP BY gender;
+
+INSERT INTO employee_payroll(name,salary,start) VALUES ('MITHALI',400000,'2020-12-30');
+INSERT INTO employee_payroll(name,salary,start) VALUES ('SMRITI',500000,'2020-11-17');
+UPDATE employee_payroll SET gender = 'F' WHERE name = 'SMRITI';
+
+SELECT gender,count(name) FROM employee_payroll GROUP BY gender;
+SELECT avg(salary) FROM employee_payroll WHERE gender = 'F' GROUP BY gender;
+
+
 
 

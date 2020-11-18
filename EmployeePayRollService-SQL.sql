@@ -45,5 +45,10 @@ ALTER TABLE employee_payroll ADD PhoneNumber BIGINT after name;
 ALTER TABLE employee_payroll ADD Address varchar(100) after PhoneNumber;
 ALTER TABLE employee_payroll ADD Department varchar(50) NOT NULL after Address;
 
+ALTER TABLE employee_payroll RENAME COLUMN salary TO basic_pay;
+ALTER TABLE employee_payroll ADD deductions BIGINT after basic_pay;
+ALTER TABLE employee_payroll ADD taxable_pay BIGINT after deductions;
+ALTER TABLE employee_payroll ADD tax BIGINT after taxable_pay;
+ALTER TABLE employee_payroll ADD net_pay BIGINT after tax;
 
 
